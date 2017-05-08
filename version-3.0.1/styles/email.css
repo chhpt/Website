@@ -1,0 +1,90 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td {
+  padding: 0;
+}
+
+.calendar_container {
+  position: relative;
+  width: 100%;
+}
+
+.calendar_container header {
+  border-radius: 1em 1em 0 0;
+  background: #2e7e9a;
+  color: #fff;
+  padding: 1em 1em;
+}
+
+.day {
+  font-size: 2em;
+  font-weight: 900;
+  margin-left: 20px;
+}
+
+.month {
+  font-size: 1em;
+  padding-top: 2px;
+  margin-left: 20px;
+}
+
+.calendar {
+  background: #fff;
+  border-radius: 0 0 1em 1em;
+  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
+  color: #555;
+  display: inline-block;
+  padding: 1em;
+}
+
+.calendar thead {
+  color: #e66b6b;
+  font-weight: 700;
+}
+
+.calendar td {
+  padding: 6px 12px;
+  text-align: center;
+}
+
+.calendar tbody td:hover {
+  background: #cacaca;
+  color: #fff;
+}
+
+.current_day {
+  color: #e66b6b;
+}
+
+.prev_month,
+.next_month {
+  color: #cacaca;
+}
+
+.ring-left,
+.ring-right {
+  position: absolute;
+  top: 78px;
+}
+
+.ring-left { left: 2em; }
+.ring-right { right: 2em; }
+
+.ring-left:before,
+.ring-left:after,
+.ring-right:before,
+.ring-right:after {
+  background: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, .3), 0 -1px 1px rgba(0, 0, 0, .2);
+  box-shadow: 0 3px 1px rgba(0, 0, 0, .3), 0 -1px 1px rgba(0, 0, 0, .2);
+  content: "";
+  display: inline-block;
+  margin: 8px;
+  height: 32px;
+  width: 8px;
+}

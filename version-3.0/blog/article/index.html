@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <link rel="stylesheet" href="styles/home_page.css">
+      <script src="../../scripts/jquery.js"></script>
+</head>
+
+<body>
+      <section class="header">
+            <div class="nav-bar">
+                  <div class="logo">
+                        <a href="http://www.wuyiqing.top">Whoyoung</a>
+                  </div>
+                  <div class="list">
+                        <ul>
+                              <li class="blog"><a href="">Blog</a></li>
+                              <li class="photo"><a href="">Photo</a></li>
+                              <li class="we"><a href="">We</a></li>
+                        </ul>
+                  </div>
+            </div>
+      </section>
+      <section class="article-area">
+            <div id="titlearea">
+                  <h2>对象</h2>
+            </div>
+            <div id="contentarea">
+                  <div class="cell markdown-cell">
+                        <h2 id="-"><strong>对象简介</strong></h2>
+                        <hr>
+                        <p>对象将一组变量和函数组合起来，为你了解的真是世界中的某件事物创建模型。<br>在对象中：变量被认为是属性。属性向我们描述对象。<br>在对象中：函数被认为是方法 。方法代表和对象有关的任务。</p>
+                        <h2 id="-"><strong>创建对象</strong></h2>
+                        <hr>
+                        <p>1.字面量语法<br>每个键和值之间用冒号分隔。<br>每个属性和方法之间用逗号分隔。</p>
+                        <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">var</span> <span class="ace_identifier">hotel</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_identifier">name</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_string">'Quay'</span><span class="ace_punctuation ace_operator">,</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_identifier">rooms</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_string">'40'</span><span class="ace_punctuation ace_operator">,</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_identifier">booked</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_string">'25'</span><span class="ace_punctuation ace_operator">,</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_entity ace_name ace_function">checkAvailability</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_storage ace_type">function</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_keyword">return</span> <span class="ace_variable ace_language">this</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">room</span><span class="ace_keyword ace_operator">-</span><span class="ace_variable ace_language">this</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">booked</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">;</span>
+</div></div></div></pre>
+                        <p>2.构造函数语法<br>用new关键字和对象的构造函数相结合可以创建一个空白对象，随后可以为其添加属性和方法。</p>
+                        <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">var</span> <span class="ace_identifier">hotel</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_variable ace_language">Object</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">hotel</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">name</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_string">'Quay'</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">hotel</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">rooms</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">40</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">hotel</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">booked</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">25</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">hotel</span><span class="ace_punctuation ace_operator">.</span><span class="ace_entity ace_name ace_function">checkAvilability</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_storage ace_type">function</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_keyword">return</span> <span class="ace_variable ace_language">this</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">rooms</span> <span class="ace_keyword ace_operator">-</span> <span class="ace_variable ace_language">this</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">booked</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">;</span>
+</div></div></div></pre>
+                        <p>可以用这种语法为你创建的对象添加属性和方法（无论是用哪种方法创建的）。</p>
+                        <p>对象构造函数可以使用函数作为模板来创建对象。</p>
+                        <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">function</span> <span class="ace_entity ace_name ace_function">Hotel</span><span class="ace_paren ace_lparen">(</span><span class="ace_variable ace_parameter">name</span><span class="ace_punctuation ace_operator">, </span><span class="ace_variable ace_parameter">rooms</span><span class="ace_punctuation ace_operator">, </span><span class="ace_variable ace_parameter">booked</span><span class="ace_paren ace_rparen">)</span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_variable ace_language">this</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">name</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">name</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_variable ace_language">this</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">rooms</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">rooms</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_variable ace_language">this</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">booked</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">booked</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_storage ace_type">this</span><span class="ace_punctuation ace_operator">.</span><span class="ace_entity ace_name ace_function">checkAvailability</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_storage ace_type">function</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">retuen</span> <span class="ace_variable ace_language">this</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">rooms</span> <span class="ace_keyword ace_operator">-</span> <span class="ace_variable ace_language">this</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">booked</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></pre>
+                        <p>使用构造函数来创建对象的实例</p>
+                        <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">var</span> <span class="ace_identifier">quayHotel</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Hotel</span><span class="ace_paren ace_lparen">(</span><span class="ace_string">'Quay'</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">40</span> <span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">25</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">var</span> <span class="ace_identifier">parkHotel</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Hotel</span><span class="ace_paren ace_lparen">(</span><span class="ace_string">'Park'</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">120</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">77</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div></div></div></pre>
+                        <h2 id="-"><strong>访问对象</strong></h2>
+                        <hr>
+                        <p>访问属性或方法时使用点符号。<br>也可以使用方括号来访问对象的属性（不能用来访问方法）。</p>
+                        <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">var</span> <span class="ace_identifier">hotelName</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">hotel</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">name</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">var</span> <span class="ace_identifier">roomsFree</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">hotel</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">checkAvailability</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">var</span> <span class="ace_identifier">hotelName</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">hotel</span><span class="ace_paren ace_lparen">[</span><span class="ace_string">'name'</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">;</span>
+</div></div></div></pre>
+                        <h2 id="-"><strong>修改对象</strong></h2>
+                        <hr>
+                        <p>1.修改属性</p>
+                        <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">hotel</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">name</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_string">'Park'</span><span class="ace_punctuation ace_operator">;</span>
+</div></div></div></pre>
+                        <p>如果这个属性不存在，则会将其添加到对象上。</p>
+                        <p>2.删除属性</p>
+                        <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">delete</span> <span class="ace_identifier">hotel</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">name</span><span class="ace_punctuation ace_operator">;</span>
+</div></div></div></pre>
+                  </div>
+            </div>
+      </section>
+      <div class="end-line">
+            <hr />
+      </div>
+      <section class="timeline-area">
+            <ul class="timeline">
+                  <li class="bar"></li>
+            </ul>
+      </section>
+      <section class="share">
+      </section>
+      <section class="author">
+            <div class="author-wrap">
+                  <div class="author-img">
+                        <img src="http://img.my.csdn.net/uploads/201703/26/1490497985_3287.jpg" alt="作者">
+
+                  </div>
+                  <div class="author-info">
+                        <a href="#">
+                              <div class="author-name">
+                                    无亦情
+                              </div>
+                        </a>
+                        <div class="author-intro">
+                              Web工程师 Web工程师 Web工程师 Web工程师
+                        </div>
+                        <div class="show-time">
+                              3.27
+                        </div>
+                  </div>
+
+            </div>
+      </section>
+      <section class="comment">
+            <div class="title">
+                  评论区
+            </div>
+            <!-- UY BEGIN -->
+            <div id="uyan_frame"></div>
+            <!-- UY END -->
+      </section>
+
+      <section class="to-top">
+            <div class="top-button" title="到顶部">
+                  <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-top"></use>
+                  </svg>
+            </div>
+      </section>
+      <!--
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2128371"></script>
+      -->
+      <script>
+            //动态脚本
+            var script = document.createElement("script");
+            script.setAttribute("src", "http://v2.uyan.cc/code/uyan.js?uid=2128371");
+            script.onload = function () {
+                  var change_script = document.createElement("script");
+                  change_script.setAttribute("src", "scripts/article.js");
+                  document.getElementsByTagName("body")[0].appendChild(change_script);
+
+            }
+            document.getElementsByTagName("body")[0].appendChild(script);
+      </script>
+      <!--
+      <script src="scripts/article.js"></script>
+      -->
+
+      <script src="http://at.alicdn.com/t/font_knruvv6lgxim5cdi.js"></script>
+</body>
+
+</html>

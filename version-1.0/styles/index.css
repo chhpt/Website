@@ -1,0 +1,274 @@
+/*blue: #186dee;
+ red: #db4733;
+ yellow: #ffba03;
+ green: #009955;
+ transparent: 透明的;
+*/
+/*Common*********************************/
+.hr{
+    height: 2px;
+    width: 180px;
+    background: black;
+    margin: 20px auto;
+} 
+
+header{
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/*Header**********************************/
+.clearfix:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.headcontent{
+    height: 68px;
+    background: #33475f;
+}
+
+.firstpage{
+    height: 950px;
+    background: transparent;
+}
+
+.firstpage i{
+    margin: 30px;
+    color: white;
+}
+
+.headcontent ul {
+    margin: 0 10px;
+    line-height: 68px;
+    float: right;
+}
+
+.headcontent ul li , .logo{
+    list-style: none;
+    display: inline-block;
+    line-height: 68px;
+    margin: 0 10px;
+    height: 68px;
+}
+
+.headcontent ul li a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;增大链接的有效面积
+    height: 68px;
+}
+
+.logo{
+    float: left;
+    padding: 0 20px;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo a{
+    text-decoration: none;
+    color: white;
+}
+
+.body{
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 250px 250px 0 250px;
+    text-align: center;
+}
+
+.body p{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5em;
+    margin: 30px 0 50px;
+    
+}
+
+button{
+    padding: 10px 20px;
+    background: transparent;
+    margin: 0 auto;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.more{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top:150px;
+}
+
+/*Section One************************************/
+
+.scone{
+    background: #009499;
+    height: 500px;
+    margin: 0;
+    text-align: center;
+}
+
+.sconebody{
+    padding-top: 170px;
+}
+
+.sconebody .para p{
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.sconebody .span span{
+    padding: 10px;
+}
+
+.para p:hover{
+    font-size: 24px;
+}
+
+/*Section Two***********************************/
+
+.sctwobody{
+    background: #444B5D;
+    font-size: 0;
+}
+
+.sctwobody>div{
+    float: left;
+}
+
+.sctwoimg{
+    width: 40%;
+}
+
+.sctwoimg img{
+    width: 100%;
+}
+
+.sctwobody .sctwopara{
+    width: 60%;
+}
+
+.sctwopara{
+    text-align: center;
+    margin: 60px 0;
+    /*color: white;*/
+}
+
+.sctwopara h2{
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    margin: 0 auto;
+}
+
+.sctwopara p{
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/*Section Three**********************************/
+
+.scthreebody{
+    background: #08a790;
+    /*color: white;*/
+    padding: 0 0 50px 0;   
+}
+
+.scthreebody h2{
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.scthreebody p{
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.scthreepara{
+    width: 60%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.cards{
+    width:80%;
+    margin: 0 auto;
+}
+
+.card{
+    float: left;
+    width: 50%;
+    height: 300px;
+    padding: 30px;
+    box-sizing: border-box;/*NOTE:使两个card并列排列;*/
+    border: 1px solid white;
+}
+
+.card:first-child{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.card:nth-child(2){
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.card:nth-child(3){
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.card:nth-child(4){
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/*Footer************************************************/
+
+footer{
+    background: transparent;
+    min-height: 200px;
+    text-align: center;
+}
+
+.contact{
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+.contactpara h2{
+    margin: 0 auto;
+    padding: 50px 0 0 0;
+}
+.contact ul{
+    margin: 0;
+    padding: 50px;
+}
+
+.contact li{
+    display: inline-block;
+    margin: 0 16px;
+}
+
+.contact a{
+    color: white;
+}
+
+.copy{
+    padding: 20px;
+}
+
+/*Background Picture******************************/
+.mainbody{
+    background: #eee url(../images/background.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}

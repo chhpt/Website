@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!--定义页面字符-->
+    <meta charset="UTF-8">
+    <!--标签栏-->
+    <title>后台管理</title>
+    <!--引入CSS文件-->
+    <link rel="stylesheet" href="styles/background-m.css" />
+    <link rel="stylesheet" href="styles/load.css">
+    <!--类库-->
+    <script src="../scripts/jquery.js"></script>
+    <script src="scripts/jquery.blockUI.js"></script>
+</head>
+
+<body>
+    <section class="header">
+        <div class="nav-bar">
+            Background Management
+        </div>
+    </section>
+    <div class="container">
+        <div class="manage-area">
+            <ul>
+                <a href="">
+                    <ul>
+                        <li id="article-m">文章管理</li>
+                    </ul>
+                    <div class="article-detail">
+                        <ul>
+                            <li id="article-list">文章列表</li>
+                            <li id="add-article">添加文章</li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="">
+                    <ul>
+                        <li id="user-m">用户管理</li>
+                    </ul>
+                    <div class="user-detail">
+                        <ul>
+                            <li id="user-list">用户列表</li>
+                            <li id="add-user">添加用户</li>
+                        </ul>
+                    </div>
+                </a>
+            </ul>
+        </div>
+        <div class="detail-area clearfix">
+            <div class="inner-content">
+                <div class="list-area">
+                    <div class="title-list">
+                        <ul>
+                        </ul>
+                    </div>
+
+                    <!--加载动画区 -->
+                    <div id="loading">
+                        <div id="loading-center">
+                            <div id="loading-center-absolute">
+                                <div class="object" id="object_one"></div>
+                                <div class="object" id="object_two"></div>
+                                <div class="object" id="object_three"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="next-page clearfix">
+                        <div id="page"></div>
+                    </div>
+                </div>
+                <div class="add-area">
+                    <div class="add-article-area">
+                        此功能暂未实现
+                    </div>
+                    <div class="add-user-area">
+                        <form action="login.php" id="signup-form">
+                            <label>
+                                <span class="username">
+                                    Username
+                                </span>
+                                <input type="text">
+                            </label>
+                            <label>
+                                <span class="password-1">
+                                    Password
+                                </span>
+                                <input type="password">
+                           </label>
+                            <label>
+                                <span class="password-2">
+                                    Confirm Password
+                                </span>
+                                <input type="password">
+                           </label>
+                            <input type="submit" class="user-submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+    <script src="scripts/page.js"></script>
+    -->
+    <script src="scripts/background-m.js"></script>
+    
+    <script>
+        $(function () {
+            $("#page").Page({
+                totalPages: 9, //分页总数
+                liNums: 5, //分页的数字按钮数(建议取奇数)
+                activeClass: 'activP', //active 类样式定义
+                activePage: 1, //默认激活的页面
+                callBack: function (page) {
+                    //console.log(page)
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

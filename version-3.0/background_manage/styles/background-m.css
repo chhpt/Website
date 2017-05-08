@@ -1,0 +1,345 @@
+/*==============================================
+COMMON STYLE
+==============================================*/
+
+body {
+    font-family: "Amita";
+    letter-spacing: 3px;
+    min-width: 60em;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+input[type="submit"],
+input[type="button"] {
+    -webkit-appearance: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    text-decoration: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/*=============================================
+HEADER
+==============================================*/
+
+.nav-bar {
+    color: #fff;
+    font-size: 1.3em;
+    background-color: #000;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    /*box-shadow: rgba(0,0,0,0.5) 0.05em 0.06em 4px;*/
+}
+
+
+/*=============================================
+CONTAINER
+==============================================*/
+
+.container {
+    max-width: 65em;
+    margin: 0 auto;
+    /*box-shadow: #aaa 0.1em 0.2em 0.4em;*/
+}
+
+
+/*****************manage-area********************/
+
+.manage-area {
+    float: left;
+    width: 35%;
+    min-height: 10em;
+    text-align: center;
+    padding-bottom: 2em;
+    color: #fff;
+    background-color: #30495c;
+    border: rgba(48, 73, 92, 0.2) solid 0.1em;
+    box-shadow: rgba(48, 73, 92, 0.4) 0.2em 0.2em 6px;
+}
+
+.manage-area a,
+.manage-area li {
+    color: inherit;
+}
+
+#article-m,
+#user-m {
+    width: 6em;
+    margin: 3em auto 2em auto;
+    padding-bottom: 0.2em;
+    border-bottom: #fff solid 0.1em;
+}
+
+.article-detail,
+.user-detail {
+    display: none;
+    width: 60%;
+    position: relative;
+    left: 35%;
+}
+
+.article-detail li,
+.user-detail li {
+    text-align: left;
+    width: 60%;
+    margin: 0.2em auto;
+    padding: 0.8em 1em;
+    background-color: #222a2f;
+}
+
+
+/*****************detail-area**************/
+
+.detail-area {
+    color: #fff;
+    width: 65%;
+    margin-left: 36%;
+    background-color: #30495c;
+    /* ？？问题
+    width: 65%;
+    position: relative;
+    left: 35%;
+    */
+}
+
+.detail-area a {
+    color: inherit;
+}
+
+.inner-content {
+    width: 70%;
+    min-width: 30em;
+    margin: 0.2em auto 2em auto;
+}
+
+
+/*****************list-area************/
+
+.list-area {
+    display: none;
+    position: relative;
+}
+
+.title-list li {
+    width: 80%;
+    background-color: #222a2f;
+    margin: 0.2em auto;
+    padding: 0.8em 1em 0.8em 6em;
+}
+
+.next-page {
+    width: 90%;
+    margin: 2em 5% 0em 5%;
+}
+
+.next-page .previous,
+.next-page .list-number,
+.next-page .next {
+    padding: 0.2em;
+    float: left;
+    margin-right: 2em;
+}
+
+.list-number li {
+    margin: 0 1em;
+    display: inline-block;
+}
+
+
+/*****************add-area************/
+
+
+/**********add-article******/
+
+.add-article-area {
+    display: none;
+    width: 70%;
+    margin: 4em auto;
+    text-align: center;
+}
+
+
+/**********add-user*********/
+
+.add-user-area {
+    display: none;
+    width: 70%;
+    margin: 2em auto;
+}
+
+#signup-form {
+    width: 100%;
+    padding: 2em 0;
+    text-align: center;
+}
+
+label {
+    display: block;
+    width: 80%;
+    margin: 2.5em auto;
+    text-align: center;
+}
+
+label span {
+    display: block;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+label input {
+    width: 80%;
+    height: 3em;
+    color: inherit;
+    font-size: 1em;
+    text-align: center;
+    border: none;
+    outline: none;
+    /*消除input的输入边框效果*/
+    background-color: #30495c;
+    border-bottom: #fff solid 0.1em;
+}
+
+.add-user-area .user-submit {
+    width: 4em;
+    padding: 0.2em;
+    outline: none;
+    font-size: 1em;
+    margin: 2em auto;
+    border-radius: 0.5em;
+    border: #fff solid 0.1em;
+    background-color: #fff;
+}
+
+
+/*****************Page****************/
+
+#page {
+    height: 50px;
+    display: table;
+    margin: 0 auto;
+}
+
+.page {
+    text-align: center;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.pagingUl {
+    float: left;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 30px;
+}
+
+.pagingUl li {
+    display: inline-block;
+    /*
+    float: left;
+    */
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    background: #30495c;
+    text-align: center;
+    color: #aaa;
+    margin-right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/*
+.pagingUl li a{
+    display: inline-block;        
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 28px;
+    color: #aaa;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+*/
+
+.prv,
+.next {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    background: #30495c;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.prv {
+    margin-right: 10px;
+    margin-left: 2em;
+}
+
+.first,
+.last {
+    width: 4em;
+    height: 30px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 30px;
+    /*border: 1px solid #ddd;*/
+    cursor: pointer;
+    background: #30495c;
+    padding: 0 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.prv:hover,
+.next:hover,
+.first:hover,
+.last:hover,
+.pagingUl li:hover,
+.activP {
+    background-color: #000 !important;
+    color: #fff !important;
+}

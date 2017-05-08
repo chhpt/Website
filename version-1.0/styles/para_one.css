@@ -1,0 +1,115 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 70px;
+  position: relative;
+}
+
+.intro {
+  position: relative;
+  min-height: 300px;
+  height: 100%;
+  width: 100%;
+  background: transparent url(https://images.unsplash.com/photo-1467733444521-ab3e6983f8b1?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=69aaefe565d19beb876979d89510601b) top center no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+  transition: all .72s ease-in-out;
+}
+
+.intro:after {
+  content: '';
+  display: block;
+  position: absolute;
+  /* width: 100%; */
+  height: 500px;
+  right: -100%;
+  left: 0;
+  transform: skew(100deg);
+  background: #fff;
+  bottom: -70%;
+  box-shadow: inset 1px 0px 5px 0px rgba(204, 204, 204, 0.72);
+}
+
+.meta {
+  max-width: 300px;
+  width: 100%;
+  margin: 0% auto 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  padding-top: 110px;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px 0px rgba(204, 204, 204, 0.72);
+  transition: all .52s ease-in-out;
+}
+
+.meta__inner {
+  padding: .25rem 1rem;
+  line-height: 1.5rem;
+  position: relative;  
+  background: #fff;
+  z-index: 15;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.meta:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left:0;
+  right: 0;
+  top: 80px;
+  max-width: 300px;
+  height: 300px;
+  background: #fff;
+  border: 1px solid #ccc;
+  transform: rotate(90deg) skew(10deg);
+  z-index: 4;
+}
+
+h3 {
+    position: relative;
+    font-family: sans-serif;
+    font-weight: 300;
+    border-left: 4px solid tomato;
+    padding-left: .72rem;  
+}
+
+p {
+  font-family: serif;
+  font-size: .85rem;
+  font-weight: inherit;
+  color: #555;
+  text-align: justify;
+}
+
+p a {
+  color: tomato;
+  text-decoration: none;
+  opacity: .72;
+  
+  transition: all .27s ease-in-out;
+}
+
+p a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.container:hover .meta{
+  transform: translateY(5px);
+}
+
+.container:hover .intro {
+  transform: translateY(-5px);
+}

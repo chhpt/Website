@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="styles/catelog.css">
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="header">
+        <div class="nav-bar">
+            <div class="logo">
+                <a href="http://www.wuyiqing.top">Whoyoung</a>
+            </div>
+            <div class="list">
+                <ul>
+                    <li class="blog"><a href="">Blog</a></li>
+                    <li class="photo"><a href="">Photo</a></li>
+                    <li class="we"><a href="">We</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="articles">
+        <div class="article">
+            <div class="article-title">
+                <a href="article/">对象简介</a>
+            </div>
+            <div class="article-tags">
+                <ul>
+                    <a href="">
+                        <li class="article-tag"><i class="fa fa-tags"></i>JavaScript</li>
+                    </a>
+                    <a href="">
+                        <li class="article-tag"><i class="fa fa-tags"></i>对象</li>
+                    </a>
+                </ul>
+            </div>
+            <hr>
+            <div class="article-intro">
+                这是简介，这是简介。 这是简介，这是简介。 这是简介，这是简介。 这是简介，这是简介。 这是简介，这是简介。 这是简介，这是简介。 这是简介，这是简介。
+            </div>
+            <div class="article-info">
+                <div class="author">
+                    <div class="image">
+                        <img src="image/info-image.jpg" alt="This is the author image">
+                    </div>
+                    <div class="name">
+                        无亦情
+                    </div>
+                </div>
+                <div class="time">
+                    2017-2-8
+                </div>
+            </div>
+            <div class="article-image">
+                <img src="image/image.jpg" alt="This is a image for the articel.">
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div id="page"></div>
+    </section>
+
+    <script src="scripts/blog.js"></script>
+    <script src="scripts/page.js"></script>
+    <script>
+        $(function () {
+            $("#page").Page({
+                totalPages: 3, //分页总数
+                liNums: 5, //分页的数字按钮数(建议取奇数)
+                activeClass: 'activP', //active 类样式定义
+                activePage: 1, //默认激活的页面
+                callBack: function (page) {
+                    //console.log(page)
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
